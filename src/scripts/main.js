@@ -11,6 +11,7 @@ const start = document.querySelector('.button.start');
 const score = document.querySelector('.game-score');
 const messageLose = document.querySelector('.message-lose');
 const messageWin = document.querySelector('.message-win');
+const messageStart = document.querySelector('.message-start');
 
 function showMessage(gameStatus) {
   if (gameStatus === 'win') {
@@ -50,6 +51,7 @@ function updateStartButton() {
   start.classList.remove('start');
   start.classList.add('restart');
   start.textContent = 'Restart';
+  messageStart.classList.add('hidden');
 }
 
 start.addEventListener('click', () => {
